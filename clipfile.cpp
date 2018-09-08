@@ -101,7 +101,7 @@ class FileList {
 
 char* prepareCmd(char* prfx, char* src, char* dst) {
 	char* cmd  = (char*)calloc(strlen(prfx) + strlen(src) + strlen(dst) + 2, sizeof(char));
-	sprintf(cmd, "%s %s %s", prfx, src, dst);
+	sprintf(cmd, "%s '%s' '%s'", prfx, src, dst);
 
 	return cmd;
 }
